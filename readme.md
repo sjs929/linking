@@ -9,7 +9,7 @@ Please first install the dependency (conda):
 ```bash
 conda create -n linking python=3.7
 conda activate linking
-pip install Flask==2.2.2, python-dotenv, flask-cors
+pip install Flask==2.2.2 python-dotenv flask-cors
 ```
 
 Then, run the flask backend:
