@@ -16,4 +16,12 @@ def create_app():
     def login():
         return render_template("login.html")
 
+    # test json
+    @app.route("/welcome")
+    def welcome():
+        return {
+            "Class": "ISDN 4002",
+            "Project": "Linking"
+        }
+
     return app
