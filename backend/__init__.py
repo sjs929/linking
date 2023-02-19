@@ -21,6 +21,7 @@ def create_app():
 
     # test json
     @app.route("/welcome")
+    @cross_origin()
     def welcome():
         return {
             "Class": "ISDN 4002",
