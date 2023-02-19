@@ -21,10 +21,10 @@ Then, run the flask backend:
 flask run
 ```
 
-Note: .env file controls the environment config.
+Note: .env file controls the environment configuration.
 
 ```python
-FLASK_APP=backend  # Choose which flask module as backend entry: backend
+FLASK_APP=backend  # Choose which flask module as entry: backend
 FLASK_DEBUG=True  # Decide development/production mode.
 ```
 
@@ -36,7 +36,7 @@ A simple test to verify whether Flask flamework is installed correctly.
 
 ```cmd
 URL: http://127.0.0.1:5000/hello
-Return: HTML - "Linking! Hello, World!" 
+Return: String - "Linking! Hello, World!" 
 ```
 
 ```cmd
@@ -44,7 +44,7 @@ URL: http://127.0.0.1:5000/login
 Return: HTML - A demo page for log in
 ```
 
-```welcome
+```cmd
 URL: http://127.0.0.1:5000/welcome
 Return: JSON - {
             "Class": "ISDN 4002",
