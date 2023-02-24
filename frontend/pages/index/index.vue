@@ -4,6 +4,7 @@
 		<text class="intro">详见：</text>
 		<uni-link :href="href" :text="href"></uni-link>
 		<view>{{word_from_backend}}</view>
+		<view>到底了</view>
 	</view>
 </template>
 
@@ -21,7 +22,7 @@
 		onShow() {
 			// send data to backend
 			uni.request({
-				url: 'http://127.0.0.1:8081/request',
+				url: 'http://192.168.137.1:8081/request',
 				data: {
 				    inputstr: '这是一条由前端发给后端，再有后端发给前端的信息，看看能不能显示在前端'
 				},
