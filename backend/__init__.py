@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_cors import *
 
 PATH_templates='../frontend/templates'
@@ -27,5 +27,13 @@ def create_app():
             "Class": "ISDN 4002",
             "Project": "Linking"
         }
+    
+    # test received data from uniapp
+    @app.route("/request")
+    @cross_origin()
+    def get_text_input():
+        text = request.args.get('inputstr')
+        print(text)
+        return text
 
     return app
