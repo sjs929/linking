@@ -26,6 +26,8 @@ Note: .env file controls the environment configuration.
 ```python
 FLASK_APP=backend  # Choose which flask module as entry: backend
 FLASK_DEBUG=True  # Decide development/production mode.
+FLASK_RUN_HOST = '127.0.0.1'  # Backend IP Address
+FLASK_RUN_PORT = '8081'  # Backend Port
 ```
 
 ### 1.3 API
@@ -35,19 +37,24 @@ FLASK_DEBUG=True  # Decide development/production mode.
 A simple test to verify whether Flask flamework is installed correctly. 
 
 ```cmd
-URL: http://127.0.0.1:5000/hello
+URL: http://127.0.0.1:8081/hello
 Return: String - "Linking! Hello, World!" 
 ```
 
 ```cmd
-URL: http://127.0.0.1:5000/login
+URL: http://127.0.0.1:8081/login
 Return: HTML - A demo page for log in
 ```
 
 ```cmd
-URL: http://127.0.0.1:5000/welcome
+URL: http://127.0.0.1:8081/welcome
 Return: JSON - {
             "Class": "ISDN 4002",
             "Project": "Linking"
         }
+```
+
+```cmd
+URL: http://127.0.0.1:8081/request?inputstr="<text>"
+Return: String - <text>
 ```
